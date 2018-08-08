@@ -1,5 +1,22 @@
-﻿body {
-  /* Uncomment this to enable scrolling and zooming
-  touch-action: manipulation;
-  */
+﻿html {
+    height: 100vh;
+    background-color: #808080;
+}
+body {
+    min-height: 100vh;
+    background-color: #808080;
+}
+
+#game {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
 }
