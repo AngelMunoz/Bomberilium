@@ -1,16 +1,22 @@
 class GameScene extends Phaser.Scene {
   constructor() {
     super({ key: 'GameScene' });
+    this.controls = null;
+
+  }
+
+  preload() {
+
   }
 
   create() {
-    this.add
-      .text(this.sys.game.config.width / 2.1, this.sys.game.config.height / 2.1, 'Game Scene', {
+
+    this.startBtn = this.add
+      .text(this.sys.game.config.width / 3, this.sys.game.config.height / 3, 'Go to Boot Scene', {
         font: '20px Segoe UI',
-        fill: '#0000FF',
+        fill: '#00FF00'
       })
-      .setScrollFactor(0);
-    this.startBtn = this.add.sprite(this.sys.game.config.width / 1.2, this.sys.game.config.height / 1.2, 'Play').setInteractive();
+      .setInteractive();
     this.startBtn.on('pointerdown', this.startGame, this);
   }
 
